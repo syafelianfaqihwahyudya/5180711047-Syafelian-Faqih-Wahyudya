@@ -1,0 +1,83 @@
+#include<iostream>
+#include<windows.h>
+#include<stdlib.h>
+#include<string.h>
+
+using namespace std;
+
+int main(){
+float tb,total1,discon,mu,kembalian,total2=0;
+string id,nm,ni,nb[35];
+int jml,hb[15],mua,jb[25];
+char mmbr;
+string nama[20];
+
+nama[0]="Bayu";
+nama[1]="Irvan";
+nama[2]="Susiati";
+nama[3]="Diana";
+nama[4]="Roni";
+
+cout<<"Apakah Anda Member : ";cin>>mmbr;
+
+if(mmbr=='Y'||mmbr=='y')
+{cout<<"Masukan No identitas : ";cin>>ni;
+if(ni=="A001")
+{cout<<"Nomor Identitas : "<<ni<<endl;
+cout<<"Masukan Nama Anda : "<<nm[0]<<endl;}
+
+else if(ni=="A002")
+{cout<<"Nomor Identitas : "<<ni<<endl;
+cout<<"Masukan Nama Anda : "<<nm[1]<<endl;}
+
+else if(ni=="A003")
+{cout<<"Nomor Identitas : "<<ni<<endl;
+cout<<"Masukan Nama Anda : "<<nm[2]<<endl;}
+
+else if(ni=="A007")
+{cout<<"Nomor Identitas : "<<ni<<endl;
+cout<<"Masukan Nama Anda : "<<nm[3]<<endl;}
+
+else if(ni=="A008")
+{cout<<"Nomor identitas : "<<ni<<endl;
+cout<<"Masukan Nama Anda : "<<nm[4]<<endl;}
+}
+
+else if(mmbr=='T'||mmbr=='t')
+{cout<<"Masukkan Nama Anda: ";cin>>nm[0];
+cout<<"Nomor Identitas  : ";cin>>ni;
+cout<<endl;
+}
+
+cout<<"Jumlah Barang Yang Dibeli : ";cin>>jml;cout<<endl;
+
+for(int i=0;i<jml;i++){
+cout<<"Barang ke "<<i+1<<endl;
+cout<<"Nama Barang   : ";cin>>nb[i];
+cout<<"Jumlah Barang : ";cin>>jb[i];
+cout<<"Harga Barang  : ";cin>>hb[i];
+cout<<endl;
+
+total1=hb[i]*jb[i];
+total2=total1+total2;}
+
+cout<<"Total Harga Belanja Anda : "<<total2<<endl;
+
+if(mmbr=='Y'||mmbr=='y'){
+discon=5/(float)100;
+discon=total2*discon;
+tb=total2-discon;
+mu=mua-tb;
+
+cout<<"Anda Mendapat Discon Sebesar : "<<discon<<endl;
+cout<<"Total Belanja Yang Dibayar   :"<<tb<<endl;
+cout<<"Masukkan Uang Anda           : ";cin>>mua;
+cout<<"Kembalian Anda Sebesar       : "<<mua-tb;}
+
+else if(mmbr=='tidak'||mmbr=='Tidak')
+{cout<<"Anda Tidak Mendapatkan Discon "<<endl;cout<<endl;
+cout<<"Masukkan Uang Anda        : ";cin>>mu;
+cout<<"Kembalian Anda Sebesar    : "<<mua-tb;}
+
+return 0;
+}
